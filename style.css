@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@600&display=swap');
+
+html, body {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+#log {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  gap: 10px;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+/* Message container */
+.chat-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  animation: popIn 0.3s ease forwards;
+}
+
+/* Username */
+.name {
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 0 6px rgba(255,255,255,0.9), 0 0 10px rgba(255,255,255,0.5);
+  margin-right: 6px;
+}
+
+/* Message */
+.message {
+  color: white;
+  opacity: 0.9;
+}
+
+/* Hide avatars and badges */
+.badges, .avatar, .avatar img {
+  display: none !important;
+}
+
+/* Animations */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popOut {
+  0% {
+    opacity: 1
